@@ -1,16 +1,16 @@
 name: kind
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   install-knative:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout # https://github.com/actions/checkout
-      uses: actions/checkout@v1
-
-    - name: setup knative
-      run: hack/setup-knative-kind.sh nightly nightly
+    - name: testing
+      shell: bash
+      run: |
+        tags=
+        echo "Building with ${tags}"
+        echo "${tas}"
+        
